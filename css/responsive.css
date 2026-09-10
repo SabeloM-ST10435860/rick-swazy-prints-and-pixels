@@ -1,0 +1,597 @@
+
+/* =========================================================
+   RICK SWAZY PRINTS & PIXELS
+   Responsive stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    /* Header */
+    .main-nav {
+        gap: 18px;
+    }
+
+
+    /* General columns */
+    .two-column,
+    .contact-grid {
+        gap: 55px;
+    }
+
+
+    /* About image */
+    .about-image-placeholder {
+        min-height: 430px;
+    }
+
+    .about-image-placeholder img {
+        min-height: 430px;
+    }
+
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-large {
+        grid-row: span 1;
+        min-height: 420px;
+    }
+
+    .portfolio-wide {
+        grid-column: span 2;
+    }
+
+    .portfolio-placeholder {
+        min-height: 320px;
+    }
+
+
+    /* Process */
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-step:nth-child(2) {
+        border-right: 0;
+    }
+
+    .process-step:nth-child(n+3) {
+        border-top: 1px solid var(--border);
+    }
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    /* General */
+    .container {
+        width: min(calc(100% - 32px), var(--container));
+    }
+
+    .section-padding {
+        padding: 78px 0;
+    }
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .nav-container {
+        min-height: 70px;
+    }
+
+    .brand img {
+        width: 100px;
+        height: 56px;
+    }
+
+    .menu-toggle {
+        display: block;
+
+        position: relative;
+
+        z-index: 1002;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+
+    /* Mobile navigation */
+    .main-nav {
+        position: fixed;
+
+        inset: 70px 0 0;
+
+        height: calc(100vh - 70px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding: 30px 24px;
+
+        background: var(--white);
+
+        transform: translateX(100%);
+
+        transition: transform 350ms ease;
+
+        overflow-y: auto;
+    }
+
+    .main-nav.open {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        padding: 17px 0;
+
+        border-bottom: 1px solid var(--border);
+
+        font-size: 1rem;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .nav-cta {
+        margin-top: 22px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero-content {
+        padding-top: 90px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .hero-services {
+        gap: 8px 14px;
+
+        margin-top: 45px;
+    }
+
+    .hero-services span:not(:last-child)::after {
+        margin-left: 14px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+
+    /* Mobile hero image */
+    .hero-image-placeholder .hero-image {
+        object-position: center;
+    }
+
+    .hero-image-placeholder::after {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(4, 10, 19, 0.82) 0%,
+                rgba(7, 20, 38, 0.80) 55%,
+                rgba(4, 10, 19, 0.94) 100%
+            );
+    }
+
+
+    /* =====================================================
+       ABOUT
+       ===================================================== */
+
+    .two-column,
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    /* Reset desktop grid positioning */
+    .intro .about-image-placeholder {
+        grid-column: auto;
+        grid-row: auto;
+
+        order: 1;
+    }
+
+    .intro .section-heading {
+        grid-column: auto;
+        grid-row: auto;
+
+        order: 2;
+    }
+
+    .intro .intro-copy {
+        grid-column: auto;
+        grid-row: auto;
+
+        order: 3;
+    }
+
+
+    /* About image */
+    .about-image-placeholder {
+        width: 100%;
+
+        min-height: 380px;
+
+        border-radius: 16px;
+    }
+
+    .about-image-placeholder img {
+        width: 100%;
+
+        min-height: 380px;
+
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* =====================================================
+       SECTION HEADINGS
+       ===================================================== */
+
+    .section-top {
+        display: block;
+    }
+
+    .section-description {
+        margin-top: 20px;
+    }
+
+
+    /* =====================================================
+       SERVICES
+       ===================================================== */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 310px;
+    }
+
+
+    /* =====================================================
+       PORTFOLIO
+       ===================================================== */
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-large,
+    .portfolio-wide {
+        grid-column: auto;
+
+        grid-row: auto;
+
+        min-height: 350px;
+    }
+
+    .portfolio-placeholder {
+        min-height: 300px;
+    }
+
+
+    /* Portfolio images */
+    .portfolio-placeholder.image-slot {
+        min-height: 300px;
+
+        padding: 0;
+    }
+
+    .portfolio-placeholder.image-slot > img {
+        object-position: center;
+    }
+
+    .portfolio-placeholder.image-slot
+    .image-placeholder-content {
+        padding: 20px;
+    }
+
+
+    /* =====================================================
+       PROCESS
+       ===================================================== */
+
+    .process-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 45px;
+    }
+
+    .process-step,
+    .process-step:nth-child(2) {
+        border-right: 0;
+
+        border-bottom: 1px solid var(--border);
+
+        margin-right: 0;
+
+        padding-right: 0;
+
+        padding-bottom: 28px;
+    }
+
+    .process-step + .process-step {
+        padding-top: 28px;
+    }
+
+    .process-step:last-child {
+        border-bottom: 0;
+    }
+
+
+    /* =====================================================
+       CTA
+       ===================================================== */
+
+    .cta-inner {
+        display: block;
+    }
+
+    .cta-inner .btn {
+        margin-top: 30px;
+    }
+
+
+    /* =====================================================
+       CONTACT
+       ===================================================== */
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .footer-top {
+        display: block;
+
+        padding: 60px 0 40px;
+    }
+
+    .footer-links {
+        margin-top: 40px;
+
+        gap: 65px;
+    }
+
+    .footer-bottom {
+        display: block;
+    }
+
+    .footer-bottom p + p {
+        margin-top: 6px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    /* Hero */
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.7rem, 15vw, 4rem);
+    }
+
+
+    /* About */
+    .about-image-placeholder {
+        min-height: 300px;
+    }
+
+    .about-image-placeholder img {
+        min-height: 300px;
+    }
+
+
+    /* Portfolio */
+    .portfolio-filters {
+        gap: 7px;
+    }
+
+    .filter-btn {
+        padding: 8px 12px;
+
+        font-size: 0.7rem;
+    }
+
+    .portfolio-placeholder {
+        min-height: 280px;
+    }
+
+    .portfolio-large,
+    .portfolio-wide {
+        min-height: 320px;
+    }
+
+    .portfolio-placeholder.image-slot {
+        min-height: 280px;
+    }
+
+
+    /* Footer */
+    .footer-links {
+        gap: 35px;
+    }
+
+
+    /* WhatsApp */
+    .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 1.35rem;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+
+        transform: none;
+    }
+}
+
+/* =========================
+   INFINITE GALLERY
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .infinite-gallery {
+        padding: 70px 0;
+    }
+
+    .infinite-gallery-heading {
+        margin-bottom: 35px;
+    }
+
+    .infinite-gallery-heading h2 {
+        font-size: 2.2rem;
+    }
+
+    .infinite-slide {
+        flex: 0 0 240px;
+
+        width: 240px;
+        height: 170px;
+    }
+
+    .infinite-track {
+        gap: 15px;
+    }
+
+    .infinite-track-wrapper {
+        margin-bottom: 15px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .infinite-gallery {
+        padding: 60px 0;
+    }
+
+    .infinite-gallery-heading h2 {
+        font-size: 1.9rem;
+    }
+
+    .infinite-slide {
+        flex: 0 0 200px;
+
+        width: 200px;
+        height: 145px;
+    }
+
+}

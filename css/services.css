@@ -1,0 +1,458 @@
+/* =========================================================
+RICK SWAZY PRINTS & PIXELS
+Stage 2.2 — Detailed Services
+========================================================= */
+
+/* =========================================================
+SERVICES HERO
+========================================================= */
+
+.services-page-hero {
+padding: 170px 0 110px;
+background:
+linear-gradient(
+135deg,
+#071426,
+#10243c
+);
+color: #ffffff;
+}
+
+.services-page-hero .container {
+max-width: 1000px;
+}
+
+.services-page-hero h1 {
+max-width: 850px;
+margin: 15px 0 25px;
+font-family: "Montserrat", sans-serif;
+font-size: clamp(2.8rem, 6vw, 5.5rem);
+line-height: 0.98;
+letter-spacing: -0.04em;
+}
+
+.services-page-hero h1 span {
+display: block;
+color: #8ea5bd;
+}
+
+.services-page-hero > .container > p:not(.eyebrow) {
+max-width: 700px;
+color: rgba(255,255,255,0.72);
+font-size: 1.05rem;
+line-height: 1.8;
+}
+
+.services-hero-actions {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+margin-top: 35px;
+}
+
+/* =========================================================
+SERVICES INTRO
+========================================================= */
+
+.services-intro {
+padding-bottom: 70px;
+}
+
+.services-intro-text {
+max-width: 700px;
+margin: 20px auto 0;
+color: #687487;
+line-height: 1.8;
+}
+
+/* =========================================================
+DETAILED SERVICE
+========================================================= */
+
+.detailed-services {
+background: #f5f7fa;
+}
+
+.detailed-service {
+display: grid;
+grid-template-columns: 1fr 1fr;
+min-height: 620px;
+margin-bottom: 50px;
+background: #ffffff;
+border-radius: 24px;
+overflow: hidden;
+box-shadow: 0 20px 60px rgba(7,20,38,0.07);
+}
+
+.detailed-service:last-child {
+margin-bottom: 0;
+}
+
+.detailed-service-reverse .detailed-service-image {
+order: 2;
+}
+
+.detailed-service-reverse .detailed-service-content {
+order: 1;
+}
+
+/* =========================================================
+SERVICE IMAGE
+========================================================= */
+
+.detailed-service-image {
+position: relative;
+min-height: 620px;
+overflow: hidden;
+background: #dce2e9;
+}
+
+.detailed-service-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+.service-image-placeholder {
+position: absolute;
+inset: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 10px;
+padding: 30px;
+text-align: center;
+background:
+linear-gradient(
+135deg,
+#dce2e9,
+#c8d1dc
+);
+color: #071426;
+}
+
+.service-image-placeholder span {
+font-size: 3rem;
+}
+
+.service-image-placeholder strong {
+font-family: "Montserrat", sans-serif;
+font-size: 0.8rem;
+letter-spacing: 0.15em;
+}
+
+.service-image-placeholder small {
+font-size: 0.75rem;
+opacity: 0.7;
+}
+
+.detailed-service-image:not(.show-placeholder)
+.service-image-placeholder:not(.permanent) {
+display: none;
+}
+
+/* =========================================================
+VIDEO BADGE
+========================================================= */
+
+.service-video-badge {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 70px;
+height: 70px;
+display: flex;
+align-items: center;
+justify-content: center;
+transform: translate(-50%, -50%);
+border: 2px solid rgba(255,255,255,0.9);
+border-radius: 50%;
+color: #ffffff;
+background: rgba(7,20,38,0.55);
+backdrop-filter: blur(8px);
+}
+
+/* =========================================================
+SERVICE CONTENT
+========================================================= */
+
+.detailed-service-content {
+display: flex;
+justify-content: center;
+flex-direction: column;
+padding: 70px;
+}
+
+.service-number {
+display: block;
+margin-bottom: 25px;
+color: #a0adbc;
+font-family: "Montserrat", sans-serif;
+font-size: 0.8rem;
+font-weight: 800;
+letter-spacing: 0.15em;
+}
+
+.detailed-service-content h2 {
+margin: 8px 0 20px;
+font-family: "Montserrat", sans-serif;
+font-size: clamp(2rem, 4vw, 3.3rem);
+line-height: 1.05;
+color: #071426;
+}
+
+.service-lead {
+max-width: 550px;
+margin-bottom: 30px;
+color: #667386;
+font-size: 1rem;
+line-height: 1.8;
+}
+
+/* =========================================================
+SERVICE FEATURES
+========================================================= */
+
+.service-features {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 13px 25px;
+margin-bottom: 30px;
+}
+
+.service-features div {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+color: #26364b;
+font-size: 0.9rem;
+}
+
+.service-features div span {
+color: #071426;
+font-weight: 800;
+}
+
+/* =========================================================
+SERVICE EXAMPLES
+========================================================= */
+
+.service-examples {
+display: flex;
+flex-direction: column;
+gap: 5px;
+margin-bottom: 30px;
+padding-left: 15px;
+border-left: 2px solid #071426;
+}
+
+.service-examples strong {
+font-size: 0.8rem;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+}
+
+.service-examples span {
+color: #6c7888;
+font-size: 0.85rem;
+}
+
+/* =========================================================
+BENEFITS
+========================================================= */
+
+.service-benefits {
+background: #ffffff;
+}
+
+.benefits-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+margin-top: 50px;
+}
+
+.benefit-card {
+padding: 35px 25px;
+border: 1px solid rgba(7,20,38,0.1);
+border-radius: 16px;
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 35px rgba(7,20,38,0.08);
+}
+
+.benefit-card > span {
+font-family: "Montserrat", sans-serif;
+font-size: 0.75rem;
+font-weight: 800;
+color: #9aa7b7;
+}
+
+.benefit-card h3 {
+margin: 20px 0 12px;
+font-family: "Montserrat", sans-serif;
+font-size: 1.05rem;
+color: #071426;
+}
+
+.benefit-card p {
+margin: 0;
+color: #687487;
+font-size: 0.85rem;
+line-height: 1.7;
+}
+
+/* =========================================================
+FINAL CTA
+========================================================= */
+
+.service-final-cta {
+padding: 110px 0;
+text-align: center;
+color: #ffffff;
+background: #071426;
+}
+
+.service-final-cta .container {
+max-width: 850px;
+}
+
+.service-final-cta h2 {
+margin: 15px 0 20px;
+font-family: "Montserrat", sans-serif;
+font-size: clamp(2.3rem, 5vw, 4.5rem);
+line-height: 1.05;
+}
+
+.service-final-cta h2 span {
+display: block;
+color: #8ea5bd;
+}
+
+.service-final-cta p:not(.eyebrow) {
+max-width: 650px;
+margin: 0 auto;
+color: rgba(255,255,255,0.7);
+line-height: 1.8;
+}
+
+.service-final-actions {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 15px;
+margin-top: 35px;
+}
+
+.btn-outline-light {
+color: #ffffff;
+border-color: rgba(255,255,255,0.5);
+}
+
+.btn-outline-light:hover {
+background: #ffffff;
+color: #071426;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+
+.detailed-service {
+    grid-template-columns: 1fr;
+}
+
+
+.detailed-service-reverse .detailed-service-image {
+    order: 1;
+}
+
+
+.detailed-service-reverse .detailed-service-content {
+    order: 2;
+}
+
+
+.detailed-service-image {
+    min-height: 450px;
+}
+
+
+.detailed-service-content {
+    padding: 55px;
+}
+
+
+.benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+}
+
+@media (max-width: 700px) {
+
+
+.services-page-hero {
+    padding: 140px 0 80px;
+}
+
+
+.detailed-service {
+    border-radius: 16px;
+}
+
+
+.detailed-service-image {
+    min-height: 350px;
+}
+
+
+.detailed-service-content {
+    padding: 40px 25px;
+}
+
+
+.service-features {
+    grid-template-columns: 1fr;
+}
+
+
+.benefits-grid {
+    grid-template-columns: 1fr;
+}
+
+
+.service-final-cta {
+    padding: 80px 0;
+}
+
+
+}
+
+@media (max-width: 450px) {
+
+
+.services-hero-actions,
+.service-final-actions {
+    flex-direction: column;
+}
+
+
+.services-hero-actions .btn,
+.service-final-actions .btn {
+    width: 100%;
+}
+
+
+}
