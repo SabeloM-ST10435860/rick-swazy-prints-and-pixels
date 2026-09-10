@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rick-swazy-prints-and-pixels.vercel.app/sitemap.xml
