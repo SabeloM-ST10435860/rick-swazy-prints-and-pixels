@@ -1835,11 +1835,10 @@ h1 span {
 
 .tiktok-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
     align-items: start;
 }
-
 
 /* VIDEO CARD */
 
@@ -1890,10 +1889,17 @@ h1 span {
 
 .tiktok-video {
     width: 100%;
-    background: #ffffff;
+    aspect-ratio: 9 / 16;
+    background: #000000;
     overflow: hidden;
 }
 
+.tiktok-video iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 .tiktok-video .tiktok-embed {
     margin: 0 auto !important;
     width: 100% !important;

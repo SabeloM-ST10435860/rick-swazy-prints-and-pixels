@@ -656,3 +656,21 @@
         max-width: 340px;
     }
 }
+
+@media (max-width: 1100px) {
+    .tiktok-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .tiktok-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tiktok-card {
+        max-width: 380px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
