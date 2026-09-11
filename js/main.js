@@ -712,4 +712,62 @@ I look forward to hearing from you.`;
 
 });
 
+/* =====================================================
+   OUR WORK — TIKTOK FILTER
+===================================================== */
 
+const workFilters = document.querySelectorAll(".work-filter");
+const tiktokCards = document.querySelectorAll(".tiktok-card");
+
+workFilters.forEach((filter) => {
+
+    filter.addEventListener("click", () => {
+
+        const selectedCategory = filter.dataset.workFilter;
+
+
+        /* Update active button */
+
+        workFilters.forEach((button) => {
+            button.classList.remove("active");
+        });
+
+        filter.classList.add("active");
+
+
+        /* Filter TikTok cards */
+
+        tiktokCards.forEach((card) => {
+
+            const categories = card.dataset.workCategory.split(" ");
+
+            if (
+                selectedCategory === "all" ||
+                categories.includes(selectedCategory)
+            ) {
+
+                card.style.display = "";
+
+                requestAnimationFrame(() => {
+                    card.classList.remove("work-filter-hidden");
+                });
+
+            } else {
+
+                card.classList.add("work-filter-hidden");
+
+                setTimeout(() => {
+
+                    if (card.classList.contains("work-filter-hidden")) {
+                        card.style.display = "none";
+                    }
+
+                }, 250);
+
+            }
+
+        });
+
+    });
+
+});

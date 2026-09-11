@@ -595,3 +595,64 @@
     }
 
 }
+
+/* =====================================================
+   OUR WORK — RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .tiktok-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .our-work-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .our-work-filters {
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    .work-filter {
+        padding: 9px 15px;
+        font-size: 0.8rem;
+    }
+
+    .tiktok-card-header {
+        padding: 15px;
+    }
+
+    .tiktok-category {
+        font-size: 0.7rem;
+    }
+
+    .our-work-cta {
+        padding: 25px 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .tiktok-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .tiktok-card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .tiktok-video {
+        max-width: 340px;
+    }
+}

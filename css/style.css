@@ -1795,3 +1795,132 @@ h1 span {
     transform: scale(1.05);
 }
 
+/* =====================================================
+   OUR WORK — TIKTOK SHOWCASE
+===================================================== */
+
+.our-work {
+    background: var(--bg-light, #f7f8fa);
+}
+
+.our-work-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 35px 0 45px;
+}
+
+.work-filter {
+    border: 1px solid rgba(7, 20, 38, 0.15);
+    background: transparent;
+    color: #071426;
+    padding: 11px 20px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.work-filter:hover,
+.work-filter.active {
+    background: #071426;
+    color: #ffffff;
+    border-color: #071426;
+}
+
+
+/* TIKTOK GRID */
+
+.tiktok-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* VIDEO CARD */
+
+.tiktok-card {
+    background: #ffffff;
+    border: 1px solid rgba(7, 20, 38, 0.08);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(7, 20, 38, 0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tiktok-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(7, 20, 38, 0.13);
+}
+
+
+/* CARD HEADER */
+
+.tiktok-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(7, 20, 38, 0.08);
+}
+
+.tiktok-category {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #071426;
+}
+
+.tiktok-platform {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #777;
+}
+
+
+/* TIKTOK EMBED */
+
+.tiktok-video {
+    width: 100%;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.tiktok-video .tiktok-embed {
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+
+/* CTA */
+
+.our-work-cta {
+    margin-top: 50px;
+    padding: 35px;
+    background: #071426;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.our-work-cta p {
+    margin: 0;
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+.our-work-cta .btn {
+    flex-shrink: 0;
+}
+
